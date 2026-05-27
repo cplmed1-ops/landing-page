@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>B-Pulse | Reclaim Your Comfort and Confidence</title>
 <meta name="description" content="The B-Pulse treatment, non-invasive PEMF technology to strengthen your pelvic floor. Free 10-minute trial.">
-
+ 
 <!-- ============================================================
      QUICK GUIDE FOR PARTNERS (EDITS)
      ============================================================
@@ -15,11 +15,11 @@
      4. COLORS        → edit the CSS variables (--color-*)
      5. IMAGES        → replace the [IMAGE_*] placeholders
      ============================================================ -->
-
+ 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Bodoni+Moda:wght@600;700;800;900&display=swap" rel="stylesheet">
-
+ 
 <style>
 /* ============ CUSTOMIZABLE VARIABLES (CHARCOAL + GOLD PALETTE) ============ */
 :root {
@@ -103,7 +103,7 @@ img { max-width: 100%; height: auto; display: block; }
 .trust-item { display: flex; align-items: center; gap: 10px; font-size: 14px; opacity: 0.9; transition: transform 0.3s var(--ease-out); }
 .trust-item:hover { transform: translateY(-3px); }
 .trust-item svg { color: var(--color-secondary); flex-shrink: 0; }
-.hero-image-wrap { position: relative; border-radius: 28px; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.4); aspect-ratio: 4/5; background: linear-gradient(135deg, #BB9B4E 0%, #E8C572 100%); opacity: 0; transform: scale(0.9); animation: floatHero 6s ease-in-out infinite, fadeInScale 1.2s var(--ease-out) 0.6s forwards; }
+.hero-image-wrap { position: relative; border-radius: 28px; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.4); aspect-ratio: 1/1; background: linear-gradient(135deg, #BB9B4E 0%, #E8C572 100%); opacity: 0; transform: scale(0.9); animation: floatHero 6s ease-in-out infinite, fadeInScale 1.2s var(--ease-out) 0.6s forwards; }
 @keyframes fadeInScale { to { opacity: 1; transform: scale(1); } }
 @keyframes floatHero { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-15px); } }
 .hero-image-wrap img { width: 100%; height: 100%; object-fit: cover; }
@@ -144,7 +144,7 @@ section { padding: 100px 0; position: relative; }
 .about-features { list-style: none; margin-top: 28px; }
 .about-features li { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px; color: var(--color-dark); font-weight: 500; transition: transform 0.3s var(--ease-out); }
 .about-features li:hover { transform: translateX(8px); }
-.about-features li::before { content: ''; background: var(--gradient-gold); width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'></polyline></svg>"); background-repeat: no-repeat; background-position: center; background-size: 14px; box-shadow: 0 4px 12px rgba(187,155,78,0.3); }
+.about-features li::before { content: ''; width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0; background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'></polyline></svg>") no-repeat center / 14px, var(--gradient-gold); box-shadow: 0 4px 12px rgba(150,119,48,0.3); }
 .about-visual { position: relative; aspect-ratio: 1; border-radius: 28px; background: linear-gradient(135deg, var(--color-light) 0%, #f0e6dc 100%); overflow: hidden; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 60px rgba(150,119,48,0.12); }
 .about-visual::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 30% 30%, rgba(187,155,78,0.15), transparent 50%), radial-gradient(circle at 70% 70%, rgba(150,119,48,0.1), transparent 50%); animation: rotateBg 20s linear infinite; }
 @keyframes rotateBg { to { transform: rotate(360deg); } }
@@ -259,47 +259,78 @@ section { padding: 100px 0; position: relative; }
     .header .btn-header { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+ 
+/* ====== HERO IMAGE (chaise sur fond noir) ====== */
+.hero-image-wrap { background: #000 !important; }
+.hero-img { width: 100%; height: 100%; object-fit: contain; display: block; }
+/* ====== VIDÉO EXPLICATIVE ====== */
+.explainer { background: var(--color-white); }
+.explainer-video { width: 100%; height: 100%; object-fit: contain; background: #000; display: block; }
+/* ====== TÉMOIGNAGES CARROUSEL ====== */
+.testimonials { background: var(--color-light); }
+.carousel { position: relative; max-width: 920px; margin: 50px auto 0; display: flex; align-items: center; gap: 16px; }
+.carousel-viewport { overflow: hidden; border-radius: 24px; flex: 1; }
+.carousel-track { display: flex; transition: transform 0.6s var(--ease-out); }
+.testi-slide { min-width: 100%; box-sizing: border-box; background: #fff; border: 1px solid rgba(150,119,48,0.18); border-radius: 24px; padding: 48px; display: grid; grid-template-columns: 200px 1fr; gap: 36px; align-items: center; box-shadow: 0 20px 50px rgba(150,119,48,0.10); }
+.testi-photo { width: 200px; height: 200px; border-radius: 20px; overflow: hidden; background: var(--gradient-gold); display: flex; align-items: center; justify-content: center; color: var(--color-dark); font-family: 'Bodoni Moda', serif; font-size: 56px; font-weight: 700; }
+.testi-photo img { width: 100%; height: 100%; object-fit: cover; }
+.testi-stars { color: var(--color-secondary); font-size: 20px; letter-spacing: 3px; margin-bottom: 14px; }
+.testi-quote { font-family: 'Bodoni Moda', serif; font-size: 23px; line-height: 1.5; color: var(--color-dark); font-style: italic; margin-bottom: 18px; }
+.testi-name { font-weight: 700; color: var(--color-primary); font-size: 17px; }
+.testi-detail { color: var(--color-gray); font-size: 14px; margin-top: 2px; }
+.carousel-btn { flex-shrink: 0; width: 52px; height: 52px; border-radius: 50%; border: 2px solid rgba(150,119,48,0.3); background: #fff; color: var(--color-primary); font-size: 26px; line-height: 1; cursor: pointer; transition: all .3s var(--ease-out); display: flex; align-items: center; justify-content: center; }
+.carousel-btn:hover { background: var(--gradient-gold); color: var(--color-dark); border-color: transparent; transform: scale(1.08); }
+.carousel-dots { display: flex; gap: 10px; justify-content: center; margin-top: 28px; }
+.carousel-dots button { width: 10px; height: 10px; border-radius: 50%; border: none; background: rgba(150,119,48,0.25); cursor: pointer; transition: all .3s var(--ease-out); padding: 0; }
+.carousel-dots button.active { background: var(--gradient-gold); width: 28px; border-radius: 6px; }
+@media (max-width: 900px) { .testi-slide { grid-template-columns: 1fr; text-align: center; padding: 32px 24px; gap: 20px; } .testi-photo { margin: 0 auto; width: 120px; height: 120px; font-size: 38px; } .carousel-btn { width: 42px; height: 42px; font-size: 22px; } .testi-quote { font-size: 19px; } }
+ 
+/* ====== Vidéo intégrée dans la section What is B-Pulse ====== */
+.about-visual { aspect-ratio: auto !important; background: transparent !important; box-shadow: none !important; padding: 0 !important; display: block !important; }
+.about-visual::before { display: none !important; }
+.about-video-wrap { width: 100%; aspect-ratio: 16/9; border-radius: 20px; overflow: hidden; background: #000; box-shadow: 0 24px 60px rgba(150,119,48,0.20); }
+.about-video { width: 100%; height: 100%; object-fit: cover; display: block; }
 </style>
 </head>
 <body>
-
+ 
 <div class="page-loader" id="pageLoader"><div class="loader-pulse"></div></div>
 <div class="scroll-progress" id="scrollProgress"></div>
-
+ 
 <header class="header" id="header">
     <div class="header-inner">
         <a href="#" class="logo">B<span>·</span>Pulse</a>
         <div class="header-right">
-            <a href="b-pulse-FR-non-medical.html" class="lang-switch">FR</a>
+            <a href="b-pulse-FR-medical.html" class="lang-switch">FR</a>
             <a href="#reservation" class="btn-header"><span>Free trial</span></a>
         </div>
     </div>
 </header>
-
+ 
 <section class="hero">
     <div class="hero-particles"><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div></div>
     <div class="container">
         <div class="hero-grid">
             <div>
-                <div class="hero-badge">Backed by B-Pulse's team of nurses · PEMF Technology</div>
+                <div class="hero-badge">Led by our medical team · PEMF Technology</div>
                 <h1>Reclaim your <span class="accent">intimate comfort</span><br>and confidence with <span class="brand">[PARTNER_NAME]</span></h1>
                 <p class="hero-subtitle">The B-Pulse treatment strengthens your pelvic floor using pulsed electromagnetic stimulation. <strong>100% non-invasive, fully clothed, pain-free</strong> — start with a <strong>free 10-minute trial</strong> to feel the difference for yourself.</p>
                 <div class="hero-cta-group">
                     <a href="#reservation" class="btn-primary">Book my free trial<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-                    <a href="#video" class="btn-secondary"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Watch a testimonial</a>
+                    <a href="#how" class="btn-secondary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>Learn more about B-Pulse</a>
                 </div>
                 <div class="hero-trust">
                     <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>100% non-invasive</div>
                     <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>30 min / session</div>
-                    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>Pain-free</div><div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>Backed by B-Pulse nurses</div>
+                    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>Pain-free</div><div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>Medical team</div>
                 </div>
             </div>
-            <div class="hero-image-wrap"><div class="hero-image-placeholder">[HERO IMAGE]<br>Clinic or patient photo</div></div>
+            <div class="hero-image-wrap"><img src="heros-b-pulse.png" alt="B-Pulse" class="hero-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="hero-image-placeholder" style="display:none;">[HERO IMAGE] Add hero-bpulse.png</div></div>
         </div>
     </div>
     <div class="scroll-indicator">Discover<div class="scroll-indicator-line"></div></div>
 </section>
-
+ 
 <section class="stats">
     <div class="container">
         <div class="stats-grid">
@@ -310,7 +341,7 @@ section { padding: 100px 0; position: relative; }
         </div>
     </div>
 </section>
-
+ 
 <section class="about">
     <div class="container">
         <div class="about-grid">
@@ -327,13 +358,35 @@ section { padding: 100px 0; position: relative; }
                 </ul>
             </div>
             <div class="about-visual reveal-right">
-                <div class="pulse-rings"><div class="pulse-ring"></div><div class="pulse-ring"></div><div class="pulse-ring"></div><div class="pulse-core"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div></div>
-                <div class="pulse-label">B·Pulse<small>PEMF Technology</small></div>
+                <div class="about-video-wrap">
+                  <video controls preload="metadata" playsinline class="about-video">
+                    <source src="bpulse-video.mp4" type="video/mp4">
+                  </video>
+                </div>
             </div>
         </div>
     </div>
 </section>
-
+ 
+<!-- ============ LEARN MORE (training video coming later) ============ -->
+<section class="explainer" id="how">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Learn more</div>
+      <h2 class="section-title">Learn more about B-Pulse</h2>
+      <p class="section-subtitle">A detailed training video walks you through the technology and how the sessions work.</p>
+    </div>
+    <div class="video-wrap reveal-scale" id="formationWrap">
+      <!-- REPLACE this block with your video: <video controls preload="metadata" playsinline class="explainer-video"><source src="formation-video.mp4" type="video/mp4"></video> -->
+      <div class="video-placeholder">
+        <div class="video-play-button"><svg width="36" height="36" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
+        <p><strong>Training video coming soon</strong></p>
+        <p style="font-size:13px;margin-top:8px;opacity:.7;">Add formation-video.mp4 or a YouTube link</p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
 <section class="benefits">
     <div class="container">
         <div class="section-header reveal">
@@ -351,24 +404,64 @@ section { padding: 100px 0; position: relative; }
         </div>
     </div>
 </section>
-
-<section class="video-section" id="video">
-    <div class="container">
-        <div class="section-header reveal">
-            <div class="section-eyebrow">Client testimonial</div>
-            <h2 class="section-title">They reclaimed their comfort</h2>
-            <p class="section-subtitle">Discover the experience of patients who transformed their daily life with the B-Pulse treatment.</p>
-        </div>
-        <div class="video-wrap reveal-scale" id="videoWrap">
-            <div class="video-placeholder" onclick="loadVideo()">
-                <div class="video-play-button"><svg width="36" height="36" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
-                <p><strong>Click to watch the testimonial</strong></p>
-                <p style="font-size: 13px; margin-top: 8px; opacity: 0.7;">Replace "VIDEO_ID_YOUTUBE" in the code</p>
-            </div>
-        </div>
+ 
+<!-- ============ TESTIMONIALS (text + images carousel) ============ -->
+<!-- REPLACE with real testimonials. For a photo: <img src="..."> inside .testi-photo -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Testimonials</div>
+      <h2 class="section-title">What our clients say</h2>
+      <p class="section-subtitle">Women and men who reclaimed comfort and confidence with B-Pulse.</p>
     </div>
+    <div class="carousel reveal-scale">
+      <button class="carousel-btn prev" onclick="moveSlide(-1)" aria-label="Previous">&#8249;</button>
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="testi-slide">
+            <div class="testi-photo">MT</div>
+            <div class="testi-content">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">“After just 3 sessions, my urinary leaks almost disappeared. I feel alive again!”</p>
+              <div class="testi-name">Mary T.</div>
+              <div class="testi-detail">Montreal · Post-partum</div>
+            </div>
+          </div>
+          <div class="testi-slide">
+            <div class="testi-photo">JL</div>
+            <div class="testi-content">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">“Discreet, painless and effective. I regained confidence and control.”</p>
+              <div class="testi-name">John L.</div>
+              <div class="testi-detail">Laval · Prostate health</div>
+            </div>
+          </div>
+          <div class="testi-slide">
+            <div class="testi-photo">SD</div>
+            <div class="testi-content">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">“No pain, fully clothed. The results truly surprised me.”</p>
+              <div class="testi-name">Sophie D.</div>
+              <div class="testi-detail">Quebec · Menopause</div>
+            </div>
+          </div>
+          <div class="testi-slide">
+            <div class="testi-photo">CR</div>
+            <div class="testi-content">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">“No more leaks during my workouts. A real game-changer.”</p>
+              <div class="testi-name">Carl R.</div>
+              <div class="testi-detail">Longueuil · Athlete</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn next" onclick="moveSlide(1)" aria-label="Next">&#8250;</button>
+    </div>
+    <div class="carousel-dots" id="carouselDots"></div>
+  </div>
 </section>
-
+ 
 <section class="symptoms" id="symptoms">
     <div class="container">
         <div class="section-header reveal">
@@ -390,7 +483,7 @@ section { padding: 100px 0; position: relative; }
         <p class="symptoms-note reveal">Recognize yourself? Book your free 10-minute trial — no commitment.</p>
     </div>
 </section>
-
+ 
 <section class="process">
     <div class="container">
         <div class="section-header reveal">
@@ -398,21 +491,21 @@ section { padding: 100px 0; position: relative; }
             <h2 class="section-title">Your journey in 4 simple steps</h2>
         </div>
         <div class="process-steps">
-            <div class="process-step reveal-scale"><div class="step-number">1</div><span class="step-badge">Free</span><h4>Consultation & free trial</h4><p>A 10-min pain-free trial, backed by B-Pulse's team of nurses.</p></div>
+            <div class="process-step reveal-scale"><div class="step-number">1</div><span class="step-badge">Free</span><h4>Meet our medical team</h4><p>A free 10-minute trial with our medical team, 100% pain-free.</p></div>
             <div class="process-step reveal-scale delay-1"><div class="step-number">2</div><h4>Tailored plan</h4><p>Based on your situation, we define the optimal number of sessions together.</p></div>
             <div class="process-step reveal-scale delay-2"><div class="step-number">3</div><h4>B-Pulse sessions</h4><p>30 minutes, fully clothed, comfortably seated. Pain-free and effortless.</p></div>
             <div class="process-step reveal-scale delay-3"><div class="step-number">4</div><h4>Lasting results</h4><p>Progressive improvement and maintenance sessions for long-term effects.</p></div>
         </div>
     </div>
 </section>
-
+ 
 <section class="cta-form-section" id="reservation">
     <div class="container">
         <div class="cta-form-wrap reveal-scale">
             <div id="formState">
                 <div class="section-eyebrow">Book now</div>
                 <h2>Your free 10-minute trial</h2>
-                <p>No commitment. You're backed by B-Pulse's team of certified nurses — we'll contact you via Messenger.</p>
+                <p>No commitment. Meet our medical team and get a free trial — we'll contact you via Messenger.</p>
                 <form id="leadForm" onsubmit="handleSubmit(event)">
                     <div class="form-row">
                         <div class="form-group"><label for="prenom">First name *</label><input type="text" id="prenom" name="prenom" required placeholder="Mary"></div>
@@ -436,7 +529,7 @@ section { padding: 100px 0; position: relative; }
         </div>
     </div>
 </section>
-
+ 
 <footer class="footer">
     <div class="container">
         <div class="footer-logo">B<span>·</span>Pulse</div>
@@ -444,15 +537,15 @@ section { padding: 100px 0; position: relative; }
         <div class="footer-bottom">&copy; 2026 B-Pulse · All rights reserved</div>
     </div>
 </footer>
-
+ 
 <a href="#reservation" class="floating-cta" id="floatingCta"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.36 2 2 6.13 2 11.7c0 2.91 1.19 5.44 3.14 7.17.16.14.26.34.27.55l.05 1.78c.02.57.6.94 1.12.71l1.99-.88c.16-.07.34-.08.51-.04 1.04.29 2.15.43 3.32.43 5.64 0 10-4.13 10-9.7S17.64 2 12 2z"/></svg>Free trial</a>
-
+ 
 <script>
 /* CONFIGURATION — EDIT PER PARTNER */
 const CONFIG = { messengerUsername: "YOUR_MESSENGER_PAGE", youtubeVideoId: "VIDEO_ID_YOUTUBE", partnerName: "[PARTNER_NAME]" };
-
+ 
 window.addEventListener('load', () => { setTimeout(() => document.getElementById('pageLoader').classList.add('hidden'), 600); });
-
+ 
 window.addEventListener('scroll', () => {
     const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -463,7 +556,7 @@ window.addEventListener('scroll', () => {
     const heroImage = document.querySelector('.hero-image-wrap');
     if (heroImage && winScroll < 800) heroImage.style.transform = `translateY(${winScroll * 0.08}px)`;
 });
-
+ 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -474,7 +567,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
 document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => observer.observe(el));
-
+ 
 function animateCounter(el) {
     const target = parseInt(el.dataset.target);
     const suffix = el.dataset.suffix || '';
@@ -492,7 +585,7 @@ function animateCounter(el) {
     }
     requestAnimationFrame(update);
 }
-
+ 
 function handleSubmit(event) {
     event.preventDefault();
     const btn = document.getElementById('submitBtn');
@@ -503,12 +596,12 @@ function handleSubmit(event) {
     const telephone = document.getElementById('telephone').value.trim();
     const ville = document.getElementById('ville').value.trim();
     const message = `Hi! I'm interested in a free trial of the B-Pulse treatment.
-
+ 
 👤 Name: ${prenom} ${nom}
 📧 Email: ${email}
 📱 Phone: ${telephone}
 📍 City: ${ville}
-
+ 
 I'd like to book my free 10-minute trial. Thank you!`;
     copyToClipboard(message);
     document.getElementById('messagePreview').textContent = message;
@@ -523,6 +616,23 @@ I'd like to book my free 10-minute trial. Thank you!`;
 function copyToClipboard(text) { if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(text).catch(() => fallbackCopy(text)); } else { fallbackCopy(text); } }
 function fallbackCopy(text) { const ta = document.createElement('textarea'); ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(ta); }
 function loadVideo() { const v = document.getElementById('videoWrap'); if (CONFIG.youtubeVideoId && CONFIG.youtubeVideoId !== 'VIDEO_ID_YOUTUBE') { v.innerHTML = `<iframe src="https://www.youtube.com/embed/${CONFIG.youtubeVideoId}?autoplay=1&rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`; } else { alert("Please set the YouTube video ID in CONFIG.youtubeVideoId first"); } }
+</script>
+ 
+<script>
+(function(){
+  var track = document.getElementById('carouselTrack');
+  if(!track) return;
+  var slides = track.children.length;
+  var cur = 0;
+  var dotsWrap = document.getElementById('carouselDots');
+  for (var i=0;i<slides;i++){ (function(idx){ var b=document.createElement('button'); b.addEventListener('click',function(){ goTo(idx); }); dotsWrap.appendChild(b); })(i); }
+  function updateDots(){ var ds=dotsWrap.children; for(var j=0;j<ds.length;j++){ ds[j].className = (j===cur)?'active':''; } }
+  window.goTo = function(i){ cur=(i+slides)%slides; track.style.transform='translateX(-'+(cur*100)+'%)'; updateDots(); };
+  window.moveSlide = function(d){ goTo(cur+d); };
+  updateDots();
+  var timer = setInterval(function(){ moveSlide(1); }, 7000);
+  track.parentNode.addEventListener('mouseenter', function(){ clearInterval(timer); });
+})();
 </script>
 </body>
 </html>
